@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        dentro de una etiqueta scrip-> asociaciones a tipescript
+    -->
+    
+    <script>
+        /*
+        Asociaciones a otros lenguajes, tales como: Ecmascript, javascript, elementos que va
+        a recoger:
+        -> 1. Flechas arrow
+        -> 2. Desestructuracion (desestructuring), adaptacion orientada a objetos, basado en clases
+        -> 3. Class, propiedades del objeto
+        -> 4. Tempalte, variacion { variable } + doctype
+        -> 5. Herencia
+        -> 6. Variables, mejora de tipado.
+
+                        ===========================
+                            Funcion: arrow =>
+                        ===========================
+
+            [inicio]
+            var Array = [{elemento1:2}{elemento2:5}{elemento3:8}...argumentos]
+            var.Array.foreatch(funcion(parametro1, parametro2, indice, array)){true
+                metodo declarado
+            }
+
+            [1º evolucion]
+            var.Array.foreatch(funcion(elemeto)){
+                metodos declarados
+            }
+            */
+            var datos=[1,2,3,4,5,6]
+            for(const item in datos){
+                console.log(item)
+            };
+
+            /*
+            [2º evolucion]
+            var.Array.foreatch(elemeto=>{metodos declarados})
+            */
+            datos.forEach(prueba2=> {console.log(prueba2)});
+
+
+            /*
+            [3º evolucion]
+            elemento o funcion =>{elementos o metodos declarados}
+
+            añadimos el concepto return;
+            */
+            var otrafuncion=function(numero){
+                return numero+2;
+            }
+            //evolucion + reurn
+            var otrafuncion = (numero)=>nuemro+2;
+                console.log(otrafuncion(7))
+
+
+    </script>
+</body>
+</html>
