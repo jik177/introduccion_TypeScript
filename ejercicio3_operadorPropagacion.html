@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+                        ========
+                         spread
+                        ========
+     Permitir que una expresion pueda ser extendida/asociada/incluida en aquellas situaciones
+     donde se esperan o residen multiples argumentos (array, llamadas a funciones)
+    -->
+    <script>
+            /*
+            variables por necesidad de eficiencia del codigo la variable 
+            var=pega toda su valor a la memoria adyacente
+            Se creo alternativas necesarias:
+            -> let entender el ambito local mas especifico
+            -> const = ayudo a definir esa asignacion a un valor inmutable
+            */
+            const agregar = (a,b) => a+b;
+            let argumentos =[3,5]
+            //console.log(3,5);
+            console.log(...argumentos)
+
+            // Objetos
+            nombre = new Array('Juan', 'Pedro','Luis','Marisa');
+            document.write(`${nombre} <br> `)
+
+            //operador.
+            document.write(...nombre + "<br>")// No será su ambito mas adecuado, 
+            //trabajará mejor como propagador dentro de parametro, funciones...
+
+            // Concatenacion + objects
+            
+            // 1 string
+            var otrosNombres = new Array('Javier','Dani', ...nombre ,'David')
+            document.write(`${otrosNombres}  <br>`)
+            
+            // 2 elemento + valor, estructura json
+            let map ={a:5,b:4,c:2};
+            let map2 ={...map,d:0};
+            console.log(map2)
+            
+            //Como acceder al valor de a
+            console.log(map.a)
+    </script> 
+    
+</body>
+</html>
